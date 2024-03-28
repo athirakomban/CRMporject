@@ -1,0 +1,6 @@
+test\BaseTest.class
+test\LoginTest.class
+generaltest\Retry.class
+test\ItemsTest.class
+test\ClientsTest.class
+generaltest\Listener.class

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 55.547 s <<< FAILURE! - in TestSuite
+verifyClientSearch(test.ClientsTest)  Time elapsed: 1.495 s  <<< FAILURE!
+java.lang.AssertionError: expected [AEK] but found [AE4]
+	at test.ClientsTest.verifyClientSearch(ClientsTest.java:29)
+
+verifyDeleteCompanyName(test.ClientsTest)  Time elapsed: 6.634 s  <<< FAILURE!
+java.lang.AssertionError: expected [No record found.] but found [1116]
+	at test.ClientsTest.verifyDeleteCompanyName(ClientsTest.java:50)
+

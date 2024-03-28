@@ -1,0 +1,8 @@
+page\ClientsPage.class
+utility\ExtendReportUtility.class
+utility\FakertUtility.class
+page\ItemsPage.class
+utility\WaitUtility.class
+utility\ExcelRead.class
+constants\Constants.class
+page\LoginPage.class
