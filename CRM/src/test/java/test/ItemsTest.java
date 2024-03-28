@@ -1,19 +1,24 @@
 package test;
 
+import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import page.ItemsPage;
 import page.LoginPage;
+import utility.ExcelRead;
 
 public class ItemsTest extends BaseTest {
 
 	@Test(priority=1,retryAnalyzer = generaltest.Retry.class, groups = { "smoke", "regression" })
-	public void verifyCreateItems() {
+	public void verifyCreateItems() throws InvalidFormatException, IOException {
 		LoginPage lp=new LoginPage(driver);
 		lp.doLogin("admin@admin.com", "12345678");
 		ItemsPage ip=new ItemsPage(driver);
-		ip.doCreateItems("item1","12");
+		ip.doCreateItems("item1",ExcelRead.getDataFromExcel(Constants.testdata, "Item", 1, 0));
 		String actualsearcheditem=ip.doSearchItem("item1");
 		Assert.assertEquals(actualsearcheditem, "item1");
 	}
